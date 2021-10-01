@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@chakra-ui/icons": "1.0.15",
     "@chakra-ui/react": "1.1.2",
     "@emotion/react": "11.1.4",
     "@emotion/styled": "11.0.0",
@@ -32,8 +33,10 @@
     "final-form": "4.20.4",
     "framer-motion": "3.2.0",
     "react": "alpha",
+    "react-debounce-input": "3.2.5",
     "react-dom": "alpha",
     "react-final-form": "6.5.7",
+    "react-icons": "4.2.0",
     "zod": "3.9.5"
   },
   "devDependencies": {
