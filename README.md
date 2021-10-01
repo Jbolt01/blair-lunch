@@ -4,6 +4,8 @@ This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
 
 # **blair-lunch**
 
+Blair Lunch is a listing of clubs, activities, athletics and other events happening during Blair Lunch. Discover something new today during #blairlunch!!!
+
 ## Getting Started
 
 Run your app in the development mode.
