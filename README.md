@@ -1,8 +1,10 @@
-[![Blitz.js](https://raw.githubusercontent.com/blitz-js/art/master/github-cover-photo.png)](https://blitzjs.com)
+[![Blitz.js](public/mbhslunch.svg)](lunch.mbhs.edu)
 
 This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
 
 # **blair-lunch**
+
+Blair Lunch is a listing of clubs, activities, athletics and other events happening during Blair Lunch. Discover something new today during #blairlunch!!!
 
 ## Getting Started
 
