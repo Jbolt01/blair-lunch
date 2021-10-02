@@ -36,8 +36,8 @@ const Hero = () => {
             >
               blairlunch.com
             </Text>{" "}
-            is a listing of clubs, activities, athletics and other events happening during Blair
-            Lunch. Discover something new today during <code>#blairlunch</code>!
+            is a listing of clubs, athletics, teacher support, and other events happening during
+            Blair Lunch. Discover something new today during <code>#blairlunch</code>!
           </Text>
         </Stack>
       </Flex>
