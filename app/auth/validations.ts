@@ -27,11 +27,6 @@ export const ResetPassword = z
     path: ["passwordConfirmation"], // set the path of the error
   })
 
-export const ChangePassword = z.object({
-  currentPassword: z.string(),
-  newPassword: password,
-})
-
 export const CreateOrUpdateListing = z
   .object({
     namep: z.string().max(0, { message: " " }).optional(),
