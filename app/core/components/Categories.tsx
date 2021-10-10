@@ -21,6 +21,7 @@ import { BsPeople } from "react-icons/bs"
 import { BiPencil } from "react-icons/bi"
 import { VscSymbolMisc } from "react-icons/vsc"
 import { DebounceInput } from "react-debounce-input"
+import getListingCount from "app/listings/queries/getListingCount"
 
 interface StatsCardProps {
   title: string
@@ -32,13 +33,13 @@ interface StatsCardProps {
 }
 
 const StatCount = ({ category, toggle }) => {
-  // const [count, { refetch }] = useQuery(getListingCount, { where: { category } })
-  // useEffect(() => {
-  //   refetch()
-  // }, [refetch, toggle])
+  const [count, { refetch }] = useQuery(getListingCount, { where: { category } })
+  useEffect(() => {
+    refetch()
+  }, [refetch, toggle])
   return (
     <StatNumber fontSize={"2xl"} fontWeight={"medium"} textAlign={"right"}>
-      {10}
+      {count}
     </StatNumber>
   )
 }
@@ -131,7 +132,7 @@ const Categories = (props) => {
         />
         <StatsCard
           title={"Academic Support"}
-          stat={"academic"}
+          stat={"academic support"}
           icon={BiPencil}
           color={"#9b59b6"}
           {...props}
@@ -139,7 +140,7 @@ const Categories = (props) => {
         />
         <StatsCard
           title={"Miscellaneous"}
-          stat={"misc"}
+          stat={"miscellaneous"}
           icon={VscSymbolMisc}
           color={"#e74c3c"}
           {...props}

@@ -2,8 +2,11 @@ import { BlitzPage, useRouterQuery } from "blitz"
 import { useDisclosure } from "@chakra-ui/react"
 import Layout from "app/core/layouts/Layout"
 import Hero from "app/core/components/Hero"
-import React, { useState } from "react"
+import React, { useMemo, useState } from "react"
 import Categories from "app/core/components/Categories"
+import GridComponent from "app/core/components/Grid"
+import ListingModal from "app/core/components/ListingModal"
+import Footer from "app/core/components/Footer"
 import { useIsomorphicLayoutEffect } from "app/core/hooks/useIsomorphicLayoutEffect"
 
 const Home: BlitzPage = () => {
@@ -16,12 +19,34 @@ const Home: BlitzPage = () => {
     }
   }, [query])
 
+  const orderBy = useMemo(() => {
+    const fields = [
+      "id",
+      "createdAt",
+      "name",
+      "tagline",
+      "img",
+      "logo",
+      "likes",
+      "tags",
+      "website",
+      "social",
+    ]
+    return fields
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
+      .map((field) => ({ [field]: Math.random() > 0.5 ? "asc" : "desc" }))
+  }, [])
+
   return (
     <>
       <div className="container">
         <Hero />
         <Categories toggle={toggle} />
+        <GridComponent toggle={toggle} orderBy={orderBy} />
+        <Footer />
       </div>
+      <ListingModal {...disclosure} toggle={toggle} setToggle={setToggle} />
     </>
   )
 }
