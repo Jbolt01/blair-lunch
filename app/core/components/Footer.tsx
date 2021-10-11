@@ -94,7 +94,7 @@ const Footer = () => {
               <br />
               Made by{" "}
               <Link
-                href="https://vijayrs.ml"
+                href="https://vijayrs.com"
                 textDecor="underline"
                 target="_blank"
                 rel="nofollow noopener"
